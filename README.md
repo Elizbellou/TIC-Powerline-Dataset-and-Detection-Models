@@ -2,16 +2,25 @@
 1. The TIC Dataset consists of 2056 images (512x640) of transmission line network footage in Greece (Northeast Attica) and annotations of three object classes, i.e. towers, insulators and conductors. 
 The TIC-Dataset file contains three sub-files, organized as follows: 
 i. train dataset file ("train"):
--"Images" file with 1483 images and a JSON file with corresponding annotations (polygons)
--"Labels" file with txt annotation files (YOLO format) for each train image.   
+
+-"Images" file with 1483 images and a JSON file with corresponding annotations (polygons).
+
+-"Labels" file with txt annotation files (YOLO format) for each train image. 
+
 ii. validation dataset file ("valid"):
--"Images" file with 366 images and a JSON file with corresponding annotations (polygons)
+
+-"Images" file with 366 images and a JSON file with corresponding annotations (polygons).
+
 -"Labels" file with txt annotation files (YOLO format) for each train image.
+
 iii. Test dataset file ("test")":
--"Images" file with 207 images and a JSON file with corresponding annotations (polygons)
+
+-"Images" file with 207 images and a JSON file with corresponding annotations (polygons).
+
 -"Labels" file with txt annotation files (YOLO format) for each train image.
-3. TICmodels_weights file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ("tic_xlarge.pt"), YOLOv8l ("tic_large"), YOLOv8m (tic_medium.pt") and YOLOv8n ("tic_nano.pt").
-4. Final_TICmodel file provides the pre-trained weights file (.pt) of the TIC-model trained on TIC-Dataset, YOLOv8s ("tic_small.pt"), as well as files related to the Results of this model, such as training and validation loss graphs, PR and F1-score curves, confusion matrix and predictions on validation images (JPEG).
+
+2. TICmodels_weights file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ("tic_xlarge.pt"), YOLOv8l ("tic_large"), YOLOv8m (tic_medium.pt") and YOLOv8n ("tic_nano.pt").
+3. Final_TICmodel file provides the pre-trained weights file (.pt) of the TIC-model trained on TIC-Dataset, YOLOv8s ("tic_small.pt"), as well as files related to the Results of this model, such as training and validation loss graphs, PR and F1-score curves, confusion matrix and predictions on validation images (JPEG).
 
 Our models’ performance with Tesla T4 GPU (15GB), reaching 97% mAP@0.5 for towers detection with YOLOv8x TIC-model, are displayed in the table below. Input image size 640X640 and NMS time per image ≈ 1.5 - 2ms (not included): 
 | PL-models | Precision | Recall | mAP@0.5 | mAP@5:95 | fps | Size |
