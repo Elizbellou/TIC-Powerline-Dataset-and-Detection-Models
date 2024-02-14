@@ -22,7 +22,7 @@ iii. Test dataset file ("test")":
 
 -"Labels" file with txt annotation files (YOLO format) for each train image.
 
-2. [TICmodels_weights](https://drive.google.com/drive/folders/1iD9DfRdULxudy4jtru1bteRz3th3x38v?usp=sharing) file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ([tic_xlarge.pt](https://drive.google.com/file/d/1141g8IsKIhLKzMyXYUbpjTjZDzTgUJ5R/view?usp=sharing)), YOLOv8l ([tic_large](https://drive.google.com/file/d/10L-Z663rLdyA4DzDgn0rLTUme2gL1Es5/view?usp=sharing)), YOLOv8m ([tic_medium.pt](https://drive.google.com/file/d/10OjMQYiE2wV8NIQCJ0ivA4vEH0MvPdU2/view?usp=sharing)) and YOLOv8n ([tic_nano.pt](https://drive.google.com/file/d/11gQvu9kSdYeXzq8hh_P-LgO0pGs5Cf3O/view?usp=sharing)). 
+2. [TICmodels_weights](https://drive.google.com/drive/folders/1iD9DfRdULxudy4jtru1bteRz3th3x38v?usp=sharing) file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ([tic_xlarge.pt](https://drive.google.com/file/d/1141g8IsKIhLKzMyXYUbpjTjZDzTgUJ5R/view?usp=sharing)), YOLOv8l ([tic_large.pt](https://drive.google.com/file/d/10L-Z663rLdyA4DzDgn0rLTUme2gL1Es5/view?usp=sharing)), YOLOv8m ([tic_medium.pt](https://drive.google.com/file/d/10OjMQYiE2wV8NIQCJ0ivA4vEH0MvPdU2/view?usp=sharing)) and YOLOv8n ([tic_nano.pt](https://drive.google.com/file/d/11gQvu9kSdYeXzq8hh_P-LgO0pGs5Cf3O/view?usp=sharing)). 
    
 3. [Final_TICmodel](https://drive.google.com/drive/folders/1k6ZbP7PzigV1DkXF3g3fpQwcTmT8OsBu?usp=sharing) file provides the pre-trained weights file (.pt) of the TIC-model trained on TIC-Dataset, YOLOv8s ([tic_small.pt](https://drive.google.com/file/d/109SxkukPRckQqxaoXifwS-LMsqiiWCF1/view?usp=sharing)), as well as files related to the Results of this model, such as training and validation loss graphs, PR and F1-score curves, confusion matrix and predictions on validation images (JPEG).
  
@@ -122,4 +122,4 @@ metrics = model.val()  # evaluate model performance on the validation set
 import torch
 ```
 # Our model's predictions on video footage
-
+Inference on drone footage for detecting towers, insulators and conductors can be found [here](https://youtu.be/6pstz7oj2uk)
