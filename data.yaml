@@ -1,6 +1,6 @@
-train: /content/drive/MyDrive/CenterNet/dataset/train/
-val: /content/drive/MyDrive/CenterNet/dataset/valid/
-test: /content/drive/MyDrive/CenterNet/dataset/test/
+train: /path-to-your/directory/TIC-Dataset/train/
+val: /path-to-your/directory/TIC-Dataset/valid/
+test: /path-to-your/directory/TIC-Dataset/test/
 
 nc: 3
 names: ['Tower', 'Insulator', 'Conductors']
