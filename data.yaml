@@ -1,0 +1,6 @@
+train: /content/drive/MyDrive/CenterNet/dataset/train/
+val: /content/drive/MyDrive/CenterNet/dataset/valid/
+test: /content/drive/MyDrive/CenterNet/dataset/test/
+
+nc: 3
+names: ['Tower', 'Insulator', 'Conductors']
