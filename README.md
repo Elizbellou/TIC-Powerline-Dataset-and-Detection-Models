@@ -22,9 +22,9 @@ iii. Test dataset file ("test")":
 
 -"Labels" file with txt annotation files (YOLO format) for each train image.
 
-2. TICmodels_weights file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ("tic_xlarge.pt"), YOLOv8l ("tic_large"), YOLOv8m (tic_medium.pt") and YOLOv8n ("tic_nano.pt"). Link to download the pre-trained weights, here:
+2. TICmodels_weights file consists of four files (.pt) which correspond to the pre-trained weights of each TIC-model trained on the TIC-Dataset, using YOLOv8x ("tic_xlarge.pt"), YOLOv8l ("tic_large"), YOLOv8m (tic_medium.pt") and YOLOv8n ("tic_nano.pt"). Link to download the pre-trained weights, [here](https://drive.google.com/drive/folders/1IKnIaxqdEK2zTZ4J5yshSDQSp98RkeC8?usp=sharing)
    
-3. Final_TICmodel file provides the pre-trained weights file (.pt) of the TIC-model trained on TIC-Dataset, YOLOv8s ("tic_small.pt"), as well as files related to the Results of this model, such as training and validation loss graphs, PR and F1-score curves, confusion matrix and predictions on validation images (JPEG). Link to download the files, here:
+3. Final_TICmodel file provides the pre-trained weights file (.pt) of the TIC-model trained on TIC-Dataset, YOLOv8s ("tic_small.pt"), as well as files related to the Results of this model, such as training and validation loss graphs, PR and F1-score curves, confusion matrix and predictions on validation images (JPEG). Link to download the files, [here](https://drive.google.com/drive/folders/1k6ZbP7PzigV1DkXF3g3fpQwcTmT8OsBu?usp=sharing)
  
 # Model's evaluation
 
@@ -45,6 +45,7 @@ Our models’ performance with Tesla T4 GPU (15GB), reaching 97% mAP@0.5 for tow
 For detailed insights please read and cite :
 
 # Preparation of the data
+To train and evaluate your YOLOv8 models on TIC-Dataset a data.yaml file should be created. This file should have the form of the example data.yaml file included in this repo.
 
 ## Set Path
 ```
@@ -80,3 +81,45 @@ f.close()
 ```
 %cat data.yaml
 ```
+# Training Yolov8 using TIC-model's pre-trained weights
+
+Please refer first to [Ultralytics Yolov8](https://github.com/ultralytics/ultralytics.git) to set up the environment, requirements etc.
+
+## Download pre-trained weights
+```
+pip install gdown
+gdown --id 109SxkukPRckQqxaoXifwS-LMsqiiWCF1
+```
+## Define number of classes based on data.yaml
+```
+import yaml
+with open("data.yaml", 'r') as stream:
+    data=yaml.safe_load(stream)
+    classes=data['names']
+    num_classes = str(data['nc'])
+
+print(num_classes)
+print(classes)
+```
+## Train (CLI)
+```
+cd /your/Yolo_directory
+yolo detect train data=data.yaml model=tic_small.pt epochs=100 lr0=0.001 imgsz=640 #train your powerline detection model using our tic_small.pt
+yolo detect val model=path/to/best.pt #evaluate your model
+```
+## Train (Python)
+```
+import torch
+
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO('/path-to-weights/tic_small.pt')
+
+# Use the model
+model.train(data="/data.yaml", lr0=0.001, epochs=100)  # train the model
+metrics = model.val()  # evaluate model performance on the validation set
+import torch
+```
+# Our model's predictions on video footage
+
