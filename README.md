@@ -122,3 +122,7 @@ import torch
 ```
 # Our model's predictions on video footage
 Inference on drone footage for detecting towers, insulators and conductors can be found [here](https://youtu.be/6pstz7oj2uk)
+
+## Citation
+Please cite our work:
+Bellou, E.; Pisica, I.; Banitsas, K. Aerial Inspection of High-Voltage Power Lines Using YOLOv8 Real-Time Object Detector. Energies 2024, 17 
