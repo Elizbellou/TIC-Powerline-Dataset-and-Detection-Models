@@ -127,4 +127,4 @@ Inference on drone footage for detecting towers, insulators and conductors can b
 To use our data, please cite:
 
 Bellou, E.; Pisica, I.; Banitsas, K. Aerial Inspection of High-Voltage Power Lines Using YOLOv8 Real-Time Object Detector. Energies 2024, 17(11), 2535; https://doi.org/10.3390/en17112535
-You can read the full paper [https://www.mdpi.com/1996-1073/17/11/2535] 
+
