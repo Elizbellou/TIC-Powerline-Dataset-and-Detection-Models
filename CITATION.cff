@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this dataset or the pretrained TIC detection models, please cite the associated paper."
+title: "TIC Powerline Dataset and Detection Models"
+type: dataset
+authors:
+  - family-names: Bellou
+    given-names: Elisavet
+    orcid: "https://orcid.org/0000-0002-7088-5700"
+  - family-names: Pisica
+    given-names: Ioana
+    orcid: "https://orcid.org/0000-0002-9426-3404"
+  - family-names: Banitsas
+    given-names: Konstantinos
+    orcid: "https://orcid.org/0000-0003-2658-3032"
+repository-code: "https://github.com/Elizbellou/TIC-Powerline-Dataset-and-Detection-Models"
+url: "https://github.com/Elizbellou/TIC-Powerline-Dataset-and-Detection-Models"
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2024-05-24"
+abstract: "The TIC Powerline Dataset is an aerial inspection dataset for detecting transmission towers, insulators, and conductors in high-voltage power line imagery. It includes annotated images, YOLO-format labels, and pretrained YOLOv8 detection model weights."
+keywords:
+  - power line inspection
+  - powerline dataset
+  - TIC dataset
+  - aerial inspection
+  - object detection
+  - YOLOv8
+  - transmission towers
+  - insulators
+  - conductors
+preferred-citation:
+  type: article
+  title: "Aerial Inspection of High-Voltage Power Lines Using YOLOv8 Real-Time Object Detector"
+  authors:
+    - family-names: Bellou
+      given-names: Elisavet
+      orcid: "https://orcid.org/0000-0002-7088-5700"
+    - family-names: Pisica
+      given-names: Ioana
+      orcid: "https://orcid.org/0000-0002-9426-3404"
+    - family-names: Banitsas
+      given-names: Konstantinos
+      orcid: "https://orcid.org/0000-0003-2658-3032"
+  journal: "Energies"
+  year: 2024
+  volume: 17
+  issue: 11
+  start: 2535
+  doi: "10.3390/en17112535"
