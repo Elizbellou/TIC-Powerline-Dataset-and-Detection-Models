@@ -1,4 +1,6 @@
-# Tower Insulator Conductors (TIC) Powerline Dataset with Object Detection Models
+# Tower Insulator Conductors (TIC) Powerline Dataset for Aerial Power Line Object Detection
+The TIC Powerline Dataset is an aerial inspection dataset for detecting transmission towers, insulators, and conductors in high-voltage power line imagery. It contains 2,056 annotated images from transmission line footage in Northeast Attica, Greece, with YOLO-format labels and polygon annotations. The dataset supports training and evaluating YOLOv8 object detection models for power line inspection, tower detection, insulator detection, and conductor detection.
+
 [This is the repo link to copy](https://github.com/Elizbellou/Powerline-TIC-Dataset-and-Detection-Models)
 1. The TIC Dataset consists of 2056 images (512x640) of transmission line network footage in Greece (Northeast Attica) and annotations of three object classes, i.e. towers, insulators and conductors. Link to download the dataset, [here](https://drive.google.com/drive/folders/1iD9DfRdULxudy4jtru1bteRz3th3x38v?usp=sharing)
 
